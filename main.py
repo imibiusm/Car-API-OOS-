@@ -95,3 +95,8 @@ async def get_model_info(car_model: str):
         detail=f"Model '{car_model}' not found."
     )
     return {"models": all_models}
+
+@app.get("/all_brands")
+async def get_all_brands():
+    return {"brands": list(data.keys())}
+
